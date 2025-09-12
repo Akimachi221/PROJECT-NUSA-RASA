@@ -1,79 +1,115 @@
-/* Reset */
+/* ===== Reset ===== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* ===== Body ===== */
 body {
     font-family: "Baloo 2", cursive;
-    background-color: #AF3E3E;
+    background-color: #FA7070;
     color: white;
     text-align: center;
     overflow-x: hidden;
     min-height: 100vh;
-    /* biar body selalu full layar */
     position: relative;
-    z-index: -1;
 }
 
-/* Navbar */
+/* ===== Navbar ===== */
 .navbar {
-    padding: 25px;
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.navbar ul {
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.nav-links {
     list-style: none;
     display: flex;
-    justify-content: center;
-    gap: 100px;
+    gap: 50px;
 }
 
-.navbar a {
+.nav-links a {
     text-decoration: none;
     padding: 8px 20px;
     border: 2px solid #fff;
     border-radius: 25px;
     color: #fff;
-    transition: 0.3s;
     font-weight: 600;
-    background-color: #DA6C6C;
+    transition: 0.3s;
 }
 
-.navbar a.active,
-.navbar a:hover {
+.nav-links a:hover,
+.nav-links a.active {
     background-color: #fff;
     color: #B9413A;
 }
 
-/* Hero Section */
+/* Hamburger */
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #fff;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #AF3E3E;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: max-height 0.4s ease, opacity 0.4s ease;
+    }
+
+    .nav-links.show {
+        max-height: 300px;
+        opacity: 1;
+        padding: 20px 0;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+/* ===== Hero Section ===== */
 .hero {
     margin-top: 40px;
     position: relative;
     padding: 80px 20px 120px;
-    /* kasih space bawah biar shape terlihat */
-    background: linear-gradient(to bottom, #AF3E3E 70%, #fff 100%);
-
+    background: #FA7070;
 }
 
 .hero h1 {
     font-size: 5rem;
     font-weight: 700;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
 }
 
 .hero h1 span {
     color: #FFF176;
-    /* kuning lembut */
 }
 
 .hero p {
     margin: 15px 0 10px;
     font-size: 1.5rem;
-}
-
-/* Hero Text Shadow */
-.hero h1,
-.hero p {
     text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
 }
 
@@ -95,12 +131,9 @@ body {
     color: white;
 }
 
-/* Tombol NUSA RASA fix link */
 .btn-utama a {
     text-decoration: none;
-    /* hilangkan underline */
     color: inherit;
-    /* ikuti warna tombol */
     display: inline-block;
     width: 100%;
     height: 100%;
@@ -162,7 +195,7 @@ body {
     rotate: -8deg;
 }
 
-/* Responsive gambar hero */
+/* Responsive Hero */
 @media (max-width: 768px) {
     .hero h1 {
         font-size: 2.5rem;
@@ -177,10 +210,8 @@ body {
         font-size: 1rem;
     }
 
-    /* Atur gambar supaya mengecil */
     .hero-images img {
         max-width: 120px;
-        /* ukuran maksimal biar kecil */
     }
 
     .maskot {
@@ -210,7 +241,6 @@ body {
     }
 }
 
-/* Responsive untuk layar max 480px (HP kecil) */
 @media (max-width: 480px) {
     .hero h1 {
         font-size: 2rem;
@@ -225,83 +255,140 @@ body {
     }
 }
 
+/* ===== About Us ===== */
+.aboutus {
+    background: #AF3E3E;
+    padding: 50px 20px;
+    text-align: center;
+}
 
+.aboutus-container {
+    max-width: 900px;
+    margin: auto;
+    color: #333;
+    line-height: 1.8;
+    text-align: left;
+}
 
-/* Navbar */
-.navbar {
-    padding: 15px 25px;
+.aboutus h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: white;
+    text-align: center;
+}
+
+.aboutus h2 span {
+    color: #d26969;
+}
+
+.aboutus-section {
+    margin-bottom: 40px;
+    background: rgba(255, 255, 255, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.aboutus-section h3 {
+    margin-bottom: 15px;
+    color: #a94442;
+    font-size: 1.3rem;
+}
+
+.aboutus-section p,
+.aboutus-section li {
+    transition: color 0.3s;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+/* ===== Contact ===== */
+.contact-grid {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.contact-item {
+    display: flex;
     align-items: center;
-}
-
-.navbar .logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #fff;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 50px;
-}
-
-.nav-links a {
+    gap: 10px;
+    background: #d46a6a;
+    padding: 12px 20px;
+    border-radius: 12px;
+    color: white;
     text-decoration: none;
-    padding: 8px 20px;
-    border: 2px solid #fff;
-    border-radius: 25px;
-    color: #fff;
-    background-color: #DA6C6C;
-    font-weight: 600;
+    font-size: 18px;
     transition: 0.3s;
 }
 
-.nav-links a:hover {
-    background-color: #fff;
-    color: #B9413A;
+.contact-item i {
+    font-size: 22px;
 }
 
-/* Hamburger */
-.hamburger {
-    display: none;
-    font-size: 2rem;
+.contact-item:hover {
+    background: #f28c8c;
+    transform: translateY(-3px);
+}
+
+/* ===== Menu ===== */
+.menu {
+    padding: 40px;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.menu-card {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 12px;
+    padding: 10px;
+    gap: 10px;
+    position: relative;
+}
+
+.menu-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.menu-info {
+    flex: 1;
+}
+
+.menu-info h3 {
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+}
+
+.menu-info p {
+    font-size: 14px;
+    font-weight: bold;
+    color: #d45c4b;
+    margin-top: 5px;
+}
+
+.cart-btn {
+    background: #d45c4b;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 8px;
     cursor: pointer;
-    color: #fff;
+    font-size: 16px;
 }
 
-/* Responsive Navbar */
-@media (max-width: 768px) {
-    .nav-links {
-        position: absolute;
-        top: 70px;
-        left: 0;
-        width: 100%;
-        background: #AF3E3E;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-        padding: 0;
-
-        max-height: 0;
-        /* awalnya tertutup */
-        overflow: hidden;
-        /* sembunyikan isi */
-        opacity: 0;
-        /* transparan dulu */
-        transition: max-height 0.4s ease, opacity 0.4s ease;
-    }
-
-    .nav-links.show {
-        max-height: 300px;
-        /* tinggi saat terbuka */
-        opacity: 1;
-        /* tampil */
-        padding: 20px 0;
-    }
-
-    .hamburger {
-        display: block;
-    }
+.cart-btn:hover {
+    background: #b13d2e;
 }
