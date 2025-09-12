@@ -1,0 +1,307 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Baloo 2", cursive;
+    background-color: #AF3E3E;
+    color: white;
+    text-align: center;
+    overflow-x: hidden;
+    min-height: 100vh;
+    /* biar body selalu full layar */
+    position: relative;
+    z-index: -1;
+}
+
+/* Navbar */
+.navbar {
+    padding: 25px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+.navbar a {
+    text-decoration: none;
+    padding: 8px 20px;
+    border: 2px solid #fff;
+    border-radius: 25px;
+    color: #fff;
+    transition: 0.3s;
+    font-weight: 600;
+    background-color: #DA6C6C;
+}
+
+.navbar a.active,
+.navbar a:hover {
+    background-color: #fff;
+    color: #B9413A;
+}
+
+/* Hero Section */
+.hero {
+    margin-top: 40px;
+    position: relative;
+    padding: 80px 20px 120px;
+    /* kasih space bawah biar shape terlihat */
+    background: linear-gradient(to bottom, #AF3E3E 70%, #fff 100%);
+
+}
+
+.hero h1 {
+    font-size: 5rem;
+    font-weight: 700;
+}
+
+.hero h1 span {
+    color: #FFF176;
+    /* kuning lembut */
+}
+
+.hero p {
+    margin: 15px 0 10px;
+    font-size: 1.5rem;
+}
+
+/* Hero Text Shadow */
+.hero h1,
+.hero p {
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+}
+
+.btn-utama {
+    background: #fffde7;
+    color: #B9413A;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+.btn-utama:hover {
+    background: #fbc02d;
+    color: white;
+}
+
+/* Tombol NUSA RASA fix link */
+.btn-utama a {
+    text-decoration: none;
+    /* hilangkan underline */
+    color: inherit;
+    /* ikuti warna tombol */
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+/* Hero Images */
+.hero-images {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 40px;
+    position: relative;
+}
+
+.hero-images img {
+    transition: transform 0.3s;
+}
+
+.hero-images img:hover {
+    transform: scale(1.08);
+}
+
+.food {
+    width: 200px;
+    border-radius: 50%;
+}
+
+.food-right {
+    position: absolute;
+    right: -80px;
+    bottom: 90px;
+    width: 300px;
+    rotate: 6deg;
+}
+
+.food-left {
+    position: absolute;
+    left: -20px;
+    bottom: -90px;
+    width: 230px;
+}
+
+.maskot {
+    width: 300px;
+    rotate: 5deg;
+}
+
+.rendang {
+    width: 200px;
+    position: absolute;
+    top: -380px;
+    left: -80px;
+    rotate: 8deg;
+}
+
+.rendang-1 {
+    width: 220px;
+    rotate: -8deg;
+}
+
+/* Responsive gambar hero */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .btn-utama {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+
+    /* Atur gambar supaya mengecil */
+    .hero-images img {
+        max-width: 120px;
+        /* ukuran maksimal biar kecil */
+    }
+
+    .maskot {
+        max-width: 180px;
+    }
+
+    .food-left {
+        left: -10px;
+        bottom: -40px;
+        width: 150px;
+    }
+
+    .food-right {
+        right: -30px;
+        bottom: 40px;
+        width: 160px;
+    }
+
+    .rendang {
+        width: 120px;
+        top: -200px;
+        left: -40px;
+    }
+
+    .rendang-1 {
+        width: 130px;
+    }
+}
+
+/* Responsive untuk layar max 480px (HP kecil) */
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .hero-images img {
+        width: 150px;
+    }
+}
+
+
+
+/* Navbar */
+.navbar {
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    padding: 8px 20px;
+    border: 2px solid #fff;
+    border-radius: 25px;
+    color: #fff;
+    background-color: #DA6C6C;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: #fff;
+    color: #B9413A;
+}
+
+/* Hamburger */
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #fff;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #AF3E3E;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 0;
+
+        max-height: 0;
+        /* awalnya tertutup */
+        overflow: hidden;
+        /* sembunyikan isi */
+        opacity: 0;
+        /* transparan dulu */
+        transition: max-height 0.4s ease, opacity 0.4s ease;
+    }
+
+    .nav-links.show {
+        max-height: 300px;
+        /* tinggi saat terbuka */
+        opacity: 1;
+        /* tampil */
+        padding: 20px 0;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
