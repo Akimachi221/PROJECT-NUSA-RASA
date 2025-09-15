@@ -9,6 +9,7 @@
     <!-- Google Font mirip desain -->
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="img/surabi.png">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -30,21 +31,25 @@
     <section class="hero">
         <h1>Welcome To <span>Nusa Rasa</span></h1>
         <p>Klik gambar makanan untuk melihat penjelasan & resep.</p>
-        <button class="btn-utama"><a href="index.html">NUSA RASA</a></button>
+        <button class="btn-utama"><a href="menu.html">NUSA RASA</a></button>
 
         <!-- Gambar makanan -->
         <div class="hero-images">
-            <img src="img/rendang.png" alt="Rendang" class="rendang">
-            <img src="img/nasi-goreng.png" alt="Nasi Goreng" class="food-left">
-            <img src="img/surabi.png" alt="Surabi" class="maskot">
-            <img src="img/rendang-1.png" alt="Rendang" class="rendang-1">
-            <img src="img/sate.png" alt="Sate Ayam" class="food-right">
+            <img src="img/rendang.png" alt="Rendang" class="rendang" data-aos="fade-right">
+            <img src="img/nasi-goreng.png" alt="Nasi Goreng" class="food-left" data-aos="fade-left">
+            <img src="img/surabi.png" alt="Surabi" class="maskot" data-aos="fade-up">
+            <img src="img/rendang-1.png" alt="Rendang" class="rendang-1" data-aos="fade-up">
+            <img src="img/sate.png" alt="Sate Ayam" class="food-right" data-aos="fade-left">
         </div>
     </section>
 
 
 
     <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>

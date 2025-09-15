@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="img/surabi.png">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -27,118 +28,86 @@
 
     <!-- Menu Section -->
     <section id="menu" class="menu">
+        <p class="klik">Klik gambar makanan untuk melihat penjelasan & resep.</p>
         <div class="menu-grid">
-            <div class="menu-card">
+            <div class="menu-card" data-name="Nasi Goreng" data-price="Rp 20.000"
+                data-desc="Nasi goreng khas Indonesia dengan bumbu rempah pilihan." data-aos="fade-up"
+                data-aos-duration="500">
                 <img src="img/nasi-goreng-1.jpg" alt="Nasi Goreng">
-                <div class="menu-info">
-                    <h3>NASI GORENG</h3>
-                    <p>Rp 20.000</p>
-                </div>
-                <button class="cart-btn">🛒</button>
             </div>
 
-            <div class="menu-card">
+            <div class="menu-card" data-name="Soto Ayam" data-price="Rp 15.000"
+                data-desc="Soto ayam segar dengan kuah gurih, disajikan dengan telur rebus." data-aos="fade-up"
+                data-aos-duration="500">
                 <img src="img/soto-ayam.jpg" alt="Soto Ayam">
-                <div class="menu-info">
-                    <h3>SOTO AYAM</h3>
-                    <p>Rp 15.000</p>
-                </div>
-                <button class="cart-btn">🛒</button>
             </div>
 
-            <div class="menu-card">
+            <div class="menu-card" data-name="Rendang" data-price="Rp 16.000"
+                data-desc="Rendang daging sapi empuk dengan bumbu Minang yang kaya rasa." data-aos="fade-up"
+                data-aos-duration="500">
                 <img src="img/rendang-2.jpg" alt="Rendang">
-                <div class="menu-info">
-                    <h3>RENDANG</h3>
-                    <p>Rp 16.000</p>
-                </div>
-                <button class="cart-btn">🛒</button>
             </div>
 
-            <div class="menu-card">
-                <img src="img/sate-1.jpg" alt="Sate Ayam">
-                <div class="menu-info">
-                    <h3>SATE AYAM</h3>
-                    <p>Rp 20.000</p>
-                </div>
-                <button class="cart-btn">🛒</button>
-            </div>
-
-            <div class="menu-card">
-                <img src="img/pempek.jpg" alt="Pempek">
-                <div class="menu-info">
-                    <h3>PEMPEK</h3>
-                    <p>Rp 10.000</p>
-                </div>
-                <button class="cart-btn">🛒</button>
-            </div>
-
-            <div class="menu-card">
-                <img src="img/gado-gado.jpg" alt="Gado-gado">
-                <div class="menu-info">
-                    <h3>GADO - GADO</h3>
-                    <p>Rp 17.000</p>
-                </div>
-                <button class="cart-btn">🛒</button>
-            </div>
-
-            <div class="menu-card">
+            <div class="menu-card" data-name="Batagor" data-price="Rp 10.000"
+                data-desc="Batagor (Bakso Tahu Goreng) dengan saus kacang yang lezat." data-aos="fade-up">
                 <img src="img/batagor.jpg" alt="Batagor">
-                <div class="menu-info">
-                    <h3>BATAGOR</h3>
-                    <p>Rp 10.000</p>
-                </div>
-                <button class="cart-btn">🛒</button>
             </div>
 
-            <div class="menu-card">
-                <img src="img/surabi-2.jpg" alt="Surabi">
-                <div class="menu-info">
-                    <h3>SURABI</h3>
-                    <p>Rp 8.500</p>
-                </div>
-                <button class="cart-btn">🛒</button>
+            <div class="menu-card" data-name="Gado-Gado" data-price="Rp 17.000"
+                data-desc="Gado-Gado, salad sayuran dengan bumbu kacang yang lezat." data-aos="fade-up">
+                <img src="img/gado-gado.jpg" alt="Gado-Gado">
             </div>
 
-            <div class="menu-card">
-                <img src="img/kupat-tahu.jpg   " alt="Kupat Tahu">
-                <div class="menu-info">
-                    <h3>KUPAT TAHU</h3>
-                    <p>Rp 15.000</p>
-                </div>
-                <button class="cart-btn">🛒</button>
-            </div>
-
-            <div class="menu-card">
+            <div class="menu-card" data-name="Gorengan" data-price="Rp 2.000"
+                data-desc="Gorengan (Camilan Goreng) dengan berbagai pilihan saus." data-aos="fade-up">
                 <img src="img/gorengan.jpg" alt="Gorengan">
-                <div class="menu-info">
-                    <h3>GORENGAN</h3>
-                    <p>Rp 2.000</p>
-                </div>
-                <button class="cart-btn">🛒</button>
             </div>
 
-            <div class="menu-card">
-                <img src="img/mie-ayam.jpg" alt="Mie Ayam">
-                <div class="menu-info">
-                    <h3>MIE AYAM</h3>
-                    <p>Rp 12.500</p>
-                </div>
-                <button class="cart-btn">🛒</button>
+            <div class="menu-card" data-name="kupat-tahu" data-price="Rp 15.000"
+                data-desc="Kupat Tahu dengan bumbu kacang yang lezat." data-aos="fade-up">
+                <img src="img/kupat-tahu.jpg" alt="Kupat Tahu">
             </div>
 
-            <div class="menu-card">
-                <img src="img/otak-otak.jpg" alt="Otak-Otak">
-                <div class="menu-info">
-                    <h3>OTAK-OTAK</h3>
-                    <p>Rp 9.000</p>
-                </div>
-                <button class="cart-btn">🛒</button>
+            <div class="menu-card" data-name="Otak-otak" data-price="Rp 9.000"
+                data-desc="Otak-otak, ikan yang dibungkus daun pisang dan dibakar." data-aos="fade-up">
+                <img src="img/otak-otak.jpg" alt="Otak-otak">
             </div>
+
+            <div class="menu-card" data-name="Pempek" data-price="Rp 12.000"
+                data-desc="Pempek, makanan khas Palembang yang terbuat dari ikan dan sagu." data-aos="fade-up">
+                <img src="img/pempek.jpg" alt="Pempek">
+            </div>
+
+            <div class="menu-card" data-name="Sate" data-price="Rp 12.000"
+                data-desc="Sate, daging yang ditusuk dan dibakar, disajikan dengan bumbu kacang." data-aos="fade-up">
+                <img src="img/sate-1.jpg" alt="Sate">
+            </div>
+
+            <div class="menu-card" data-name="Surabi" data-price="Rp 12.000"
+                data-desc="Surabi, kue tradisional yang terbuat dari tepung beras dan santan." data-aos="fade-up">
+                <img src="img/surabi-2.jpg" alt="Surabi">
+            </div>
+
+            <!-- Tambahkan card lainnya -->
         </div>
     </section>
 
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img id="modalImg" src="" alt="Menu" />
+            <h3 id="modalTitle"></h3>
+            <p id="modalDesc"></p>
+        </div>
+    </div>
+
+
     <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>

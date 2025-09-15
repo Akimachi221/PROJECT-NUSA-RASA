@@ -8,7 +8,7 @@
 /* ===== Body ===== */
 body {
     font-family: "Baloo 2", cursive;
-    background-color: #FA7070;
+    background-color: #E62727;
     color: white;
     text-align: center;
     overflow-x: hidden;
@@ -94,7 +94,7 @@ body {
     margin-top: 40px;
     position: relative;
     padding: 80px 20px 120px;
-    background: #FA7070;
+    background: #E62727;
 }
 
 .hero h1 {
@@ -257,7 +257,7 @@ body {
 
 /* ===== About Us ===== */
 .aboutus {
-    background: #AF3E3E;
+    background: #E62727;
     padding: 50px 20px;
     text-align: center;
 }
@@ -283,7 +283,7 @@ body {
 
 .aboutus-section {
     margin-bottom: 40px;
-    background: rgba(255, 255, 255, 0.6);
+    background: #F3F2EC;
     padding: 20px;
     border-radius: 10px;
 }
@@ -303,7 +303,148 @@ ul {
     padding-left: 20px;
 }
 
+
+/* Menu Pinterest style */
+.menu-grid {
+    column-count: 3;
+    column-gap: 15px;
+    padding: 15px;
+    margin-top: 15px;
+}
+
+.menu-card {
+    break-inside: avoid;
+    margin-bottom: 10px;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.menu-card:hover {
+    transform: scale(1.03);
+}
+
+.menu-card img {
+    width: 100%;
+    max-width: 280px;
+    /* desktop default */
+    height: auto;
+    border-radius: 12px;
+    display: block;
+    margin: 0 auto;
+    object-fit: cover;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    width: 400px;
+    /* lebih besar biar muat gambar + teks */
+    max-width: 90%;
+    text-align: center;
+    animation: fadeIn 0.3s ease;
+}
+
+.close {
+    float: right;
+    font-size: 22px;
+    cursor: pointer;
+    color: #d45c4b;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.klik {
+    font-size: 30px;
+    color: white;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* ===================== */
+/* Responsive Breakpoints */
+/* ===================== */
+@media (max-width: 992px) {
+    .menu-grid {
+        column-count: 2;
+        /* tablet = 2 kolom */
+    }
+
+    .menu-card img {
+        max-width: 220px;
+        /* batas konsisten */
+    }
+}
+
+@media (max-width: 600px) {
+    .menu-grid {
+        column-count: 1;
+        /* HP = 1 kolom */
+    }
+
+    .menu-card img {
+        max-width: 200px;
+        /* tetap ada batas biar nggak full */
+    }
+}
+
+.modal-content img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.modal-content h3 {
+    margin: 10px 0;
+    font-size: 20px;
+    color: #d45c4b;
+}
+
+.modal-content p {
+    font-size: 14px;
+    color: #333;
+}
+
+
+
+
 /* ===== Contact ===== */
+#contact {
+    margin-top: 200px;
+}
+
+
+
 .contact-grid {
     display: flex;
     justify-content: center;
@@ -316,10 +457,10 @@ ul {
     display: flex;
     align-items: center;
     gap: 10px;
-    background: #d46a6a;
+    background: white;
     padding: 12px 20px;
     border-radius: 12px;
-    color: white;
+    color: black;
     text-decoration: none;
     font-size: 18px;
     transition: 0.3s;
@@ -330,65 +471,13 @@ ul {
 }
 
 .contact-item:hover {
-    background: #f28c8c;
+    color: white;
+    background: #E62727;
     transform: translateY(-3px);
 }
 
-/* ===== Menu ===== */
-.menu {
-    padding: 40px;
-}
-
-.menu-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.menu-card {
-    display: flex;
-    align-items: center;
-    background: white;
-    border-radius: 12px;
-    padding: 10px;
-    gap: 10px;
-    position: relative;
-}
-
-.menu-card img {
-    width: 80px;
-    height: 80px;
-    border-radius: 10px;
-    object-fit: cover;
-}
-
-.menu-info {
-    flex: 1;
-}
-
-.menu-info h3 {
-    font-size: 16px;
-    font-weight: bold;
-    color: black;
-}
-
-.menu-info p {
+.copy {
+    margin-top: 280px;
     font-size: 14px;
-    font-weight: bold;
-    color: #d45c4b;
-    margin-top: 5px;
-}
-
-.cart-btn {
-    background: #d45c4b;
     color: white;
-    border: none;
-    padding: 6px 10px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-.cart-btn:hover {
-    background: #b13d2e;
 }
