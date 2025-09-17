@@ -22,6 +22,9 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+    z-index: 1000;
+    /* biar selalu di atas */
 }
 
 .navbar .logo {
@@ -58,6 +61,8 @@ body {
     font-size: 2rem;
     cursor: pointer;
     color: #fff;
+    z-index: 1001;
+    /* tombol selalu bisa diklik */
 }
 
 /* Responsive Navbar */
@@ -67,7 +72,7 @@ body {
         top: 70px;
         left: 0;
         width: 100%;
-        background: #AF3E3E;
+        background: #E62727;
         flex-direction: column;
         align-items: center;
         gap: 20px;
@@ -76,10 +81,13 @@ body {
         overflow: hidden;
         opacity: 0;
         transition: max-height 0.4s ease, opacity 0.4s ease;
+        z-index: 999;
+        /* muncul di atas konten */
     }
 
     .nav-links.show {
-        max-height: 300px;
+        max-height: 400px;
+        /* biar lebih lega */
         opacity: 1;
         padding: 20px 0;
     }
@@ -88,6 +96,8 @@ body {
         display: block;
     }
 }
+
+
 
 /* ===== Hero Section ===== */
 .hero {
