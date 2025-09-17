@@ -23,8 +23,8 @@ body {
     justify-content: space-between;
     align-items: center;
     position: relative;
-    z-index: 1000;
-    /* biar selalu di atas */
+    z-index: 1100;
+    /* di atas overlay */
 }
 
 .navbar .logo {
@@ -61,8 +61,24 @@ body {
     font-size: 2rem;
     cursor: pointer;
     color: #fff;
-    z-index: 1001;
-    /* tombol selalu bisa diklik */
+}
+
+/* Overlay background */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    /* di bawah navbar */
+}
+
+/* Saat aktif */
+.overlay.show {
+    display: block;
 }
 
 /* Responsive Navbar */
@@ -80,15 +96,15 @@ body {
         max-height: 0;
         overflow: hidden;
         opacity: 0;
-        transition: max-height 0.4s ease, opacity 0.4s ease;
-        z-index: 999;
-        /* muncul di atas konten */
+        transform: translateY(-20px);
+        transition: max-height 0.4s ease, opacity 0.4s ease, transform 0.4s ease;
+        z-index: 1100;
     }
 
     .nav-links.show {
         max-height: 400px;
-        /* biar lebih lega */
         opacity: 1;
+        transform: translateY(0);
         padding: 20px 0;
     }
 

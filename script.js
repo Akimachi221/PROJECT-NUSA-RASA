@@ -1,6 +1,10 @@
 function toggleMenu() {
-    document.querySelector(".nav-links").classList.toggle("show");
+    const nav = document.querySelector(".nav-links");
+    const overlay = document.querySelector(".overlay");
+    nav.classList.toggle("show");
+    overlay.classList.toggle("show");
 }
+
 
 // ambil elemen modal
 const modal = document.getElementById("myModal");
