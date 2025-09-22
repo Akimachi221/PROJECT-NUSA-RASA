@@ -221,6 +221,14 @@ body {
     rotate: -8deg;
 }
 
+/* === tambahan dasar supaya posisi absolute bekerja === */
+.hero-images {
+    position: relative;           /* penting agar anak-anak img patok ke container ini */
+}
+.hero-images img {
+    position: absolute;           /* pastikan absolute supaya left/right jalan */
+}
+
 /* Responsive Hero */
 @media (max-width: 768px) {
     .hero h1 {
