@@ -244,14 +244,15 @@ body {
         max-width: 180px;
     }
 
+    /* >>> Jarak gambar disini diatur ulang <<< */
     .food-left {
-        left: -10px;
+        left: -20px;      /* geser lebih ke kiri */
         bottom: -40px;
         width: 150px;
     }
 
     .food-right {
-        right: -30px;
+        right: -50px;     /* geser lebih ke kanan biar nggak nempel */
         bottom: 40px;
         width: 160px;
     }
@@ -279,8 +280,20 @@ body {
     .hero-images img {
         width: 150px;
     }
-}
 
+    /* >>> Jarak untuk layar kecil <<< */
+    .food-left {
+        left: -15px;
+        bottom: -30px;
+        width: 130px;
+    }
+
+    .food-right {
+        right: -40px;
+        bottom: 30px;
+        width: 140px;
+    }
+}
 /* ===== About Us ===== */
 .aboutus {
     background: #E62727;
