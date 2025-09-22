@@ -244,22 +244,17 @@ body {
         max-width: 180px;
     }
 
+    /* >>> Jarak gambar disini diatur ulang <<< */
     .food-left {
-        left: 0;
-        /* semula -10px */
-        bottom: -20px;
-        /* semula -40px */
-        width: 130px;
-        /* semula 150px */
+        left: -10px;
+        bottom: -40px;
+        width: 150px;
     }
 
     .food-right {
-        right: 0;
-        /* semula -30px */
-        bottom: 20px;
-        /* semula 40px */
-        width: 140px;
-        /* semula 160px */
+        right: -30px;
+        bottom: 40px;
+        width: 160px;
     }
 
     .rendang {
@@ -284,18 +279,6 @@ body {
 
     .hero-images img {
         width: 150px;
-    }
-
-    .food-left {
-        left: 0;
-        bottom: -10px;
-        width: 110px;
-    }
-
-    .food-right {
-        right: 0;
-        bottom: 10px;
-        width: 120px;
     }
 }
 
