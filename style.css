@@ -221,14 +221,6 @@ body {
     rotate: -8deg;
 }
 
-/* === tambahan dasar supaya posisi absolute bekerja === */
-.hero-images {
-    position: relative;           /* penting agar anak-anak img patok ke container ini */
-}
-.hero-images img {
-    position: absolute;           /* pastikan absolute supaya left/right jalan */
-}
-
 /* Responsive Hero */
 @media (max-width: 768px) {
     .hero h1 {
@@ -253,15 +245,15 @@ body {
     }
 
     .food-left {
-        left: 0;           /* semula -10px */
-        bottom: -20px;     /* semula -40px */
-        width: 130px;      /* semula 150px */
+        left: -10px;
+        bottom: -40px;
+        width: 150px;
     }
 
     .food-right {
-        right: 0;          /* semula -30px */
-        bottom: 20px;      /* semula 40px */
-        width: 140px;      /* semula 160px */
+        right: -30px;
+        bottom: 40px;
+        width: 160px;
     }
 
     .rendang {
@@ -286,18 +278,6 @@ body {
 
     .hero-images img {
         width: 150px;
-    }
-
-    .food-left {
-        left: 0;
-        bottom: -10px;
-        width: 110px;
-    }
-
-    .food-right {
-        right: 0;
-        bottom: 10px;
-        width: 120px;
     }
 }
 
